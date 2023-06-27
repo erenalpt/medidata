@@ -63,5 +63,5 @@ Please refer to the original dataset and follow any additional citation guidelin
 ## Contact
 For any questions or inquiries regarding the Medidata dataset, please contact [alperent@mail.com](mailto:alperent@mail.com).
 
-References
+## References
 [1] Ahmed Hamada. (2023). Br35H: Brain Tumor Detection Dataset. Kaggle Datasets. Retrieved from https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection
