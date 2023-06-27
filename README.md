@@ -24,12 +24,12 @@ To use the Medidata dataset, you can install the Medidata library and import it 
 To use MediData, follow these steps:
 1) Import the medidata module:
 ```
-import medidata
+from medidata import dataset
 ```
 
 2) Load the BR35H dataset using the load_br35h function:
 ```
-X, y, labels = medidata.load_br35h()
+X, y, labels = dataset.load_br35h()
 ```
 This function loads the BR35H dataset from the default directory path and returns the resized images and corresponding labels as numpy arrays.
 
@@ -39,9 +39,9 @@ This function loads the BR35H dataset from the default directory path and return
 
 Here's an example of how to use MediData to load and process the BR35H dataset:
 ```
-import medidata
+from medidata import dataset
 
-X, y, labels = medidata.load_br35h()
+X, y, labels = dataset.load_br35h()
 
 # Perform further operations on the loaded dataset
 # ...

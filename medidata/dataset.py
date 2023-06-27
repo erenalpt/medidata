@@ -18,7 +18,8 @@ def load_br35h(img_size=(100, 100)):
     - y (np.array): The labels of the BR35H dataset.
     - labels (dict): A dictionary mapping label indices to label names.
     """
-    dataset_dir = os.getcwd() + "\\medidata\\br35h\\"
+    dataset_dir = os.path.join(os.path.dirname(__file__), r'br35h\\')
+    print("dataset_dir", dataset_dir)
     X = []
     y = []
     i = 0
