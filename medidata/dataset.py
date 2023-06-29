@@ -1,6 +1,7 @@
 import os
-import numpy as np
 import cv2
+import sys
+import numpy as np
 from tqdm import tqdm
 
 def load_br35h(img_size=(100, 100)):
@@ -17,9 +18,12 @@ def load_br35h(img_size=(100, 100)):
     - X (np.array): The images of the BR35H dataset, resized to the specified image size.
     - y (np.array): The labels of the BR35H dataset.
     - labels (dict): A dictionary mapping label indices to label names.
+
+    Note:
+    - Label 0 corresponds to "no".
+    - Label 1 corresponds to "yes".
     """
-    dataset_dir = os.path.join(os.path.dirname(__file__), r'br35h\\')
-    print("dataset_dir", dataset_dir)
+    dataset_dir = os.path.join(os.path.dirname(__file__), 'br35h')
     X = []
     y = []
     i = 0
@@ -27,9 +31,9 @@ def load_br35h(img_size=(100, 100)):
     for path in tqdm(sorted(os.listdir(dataset_dir))):
         if not path.startswith('.'):
             labels[i] = path
-            for file in os.listdir(dataset_dir + path):
+            for file in os.listdir(os.path.join(dataset_dir, path)):
                 if not file.startswith('.'):
-                    img = cv2.imread(dataset_dir + path + '/' + file)
+                    img = cv2.imread(os.path.join(dataset_dir, path, file))
                     img_resized = cv2.resize(img, img_size)
                     X.append(img_resized)
                     y.append(i)
