@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='medidata',
-    version='0.5.0',
+    version='0.6.0',
     description='A Python library for working with medical image datasets.',
     author='Alperen T.',
     author_email='alperent@mail.com',
