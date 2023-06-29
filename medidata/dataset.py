@@ -1,8 +1,8 @@
 import os
 import cv2
-import sys
 import numpy as np
 from tqdm import tqdm
+from sklearn.utils import shuffle
 
 def load_br35h(img_size=(100, 100)):
     """
@@ -40,4 +40,7 @@ def load_br35h(img_size=(100, 100)):
             i += 1
     X = np.array(X)
     y = np.array(y)
+
+    X, y = shuffle(X, y, random_state=46)
+    
     return X, y, labels

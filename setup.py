@@ -11,9 +11,10 @@ setup(
     url='https://github.com/erenalpt/medidata',
     packages=find_packages(),
     install_requires=[
+        'tqdm>=4.65.0',
         'numpy>=1.23.4',
-        'opencv-python>=3.4.4',
-        'tqdm>=4.65.0'
+        'scikit-learn>=1.2.2',
+        'opencv-python>=3.4.4'
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
